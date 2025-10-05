@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LinkSphinx – Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg:#0b1220; --card:#121a2b; --text:#eaf0ff; --muted:#a9b3c9; --accent:#6aa7ff; --line:#223049;
+      --max:900px;
+    }
+    html,body{background:var(--bg); color:var(--text); font:16px/1.6 system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin:0}
+    .wrap{max-width:var(--max); margin:0 auto; padding:32px 20px}
+    h1,h2,h3{line-height:1.2; margin:0 0 12px}
+    h1{font-size:2rem}
+    h2{font-size:1.25rem; margin-top:28px}
+    p,li{color:var(--muted)}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; margin:18px 0}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .small{font-size:.95rem}
+    .muted{color:var(--muted)}
+    header{margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="muted small">Effective date: October 4, 2025</p>
+      <p class="muted small">Applies to the LinkSphinx Chrome extension and the LinkSphinx Options page.</p>
+    </header>
+
+    <div class="card">
+      <h2>Summary</h2>
+      <p>LinkSphinx is designed to save and open your links quickly from the right-click menu. We do not sell your data, and we avoid collecting personal information wherever possible. Most data stays on your device in <code>chrome.storage.local</code>.</p>
+    </div>
+
+    <h2>Data We Process</h2>
+    <div class="card">
+      <h3>1) On your device (local only)</h3>
+      <ul>
+        <li><strong>Saved links & categories:</strong> URLs you add, optional titles, and small favicon data.</li>
+        <li><strong>Preferences:</strong> e.g., open in new tab, animation on/off, UI settings.</li>
+        <li><strong>Imported bookmarks (optional):</strong> If you use “Import from Chrome Bookmarks,” we read your chosen folders once to copy those bookmarks into LinkSphinx’s local storage.</li>
+      </ul>
+      <p class="small">We do <em>not</em> read page content; we only use the URL/title you choose to save.</p>
+    </div>
+
+    <div class="card">
+      <h3>2) Our servers (minimal, only for Pro)</h3>
+      <ul>
+        <li><strong>License checks:</strong> If you purchase Pro, the Options page may contact our backend to validate your license key (and status). We store only what’s needed to operate licensing (e.g., a license identifier, status, and basic anti-fraud metadata).</li>
+        <li><strong>Payments:</strong> Payments are processed by Stripe. We do not receive your full payment details. Stripe may provide us non-sensitive records (e.g., payment ID, plan, timestamp) for accounting.</li>
+        <li><strong>Email delivery (optional):</strong> If you request your license by email, a trusted provider (e.g., Resend) sends it. We store only what’s needed to deliver that email.</li>
+      </ul>
+    </div>
+
+    <h2>How We Use Data</h2>
+    <div class="card">
+      <ul>
+        <li>Provide core features (save, search, and open your links via the context menu).</li>
+        <li>Show optional UI feedback (a brief notification or a small “open shimmer” visual). We inject a tiny, ephemeral overlay script/CSS only to render that effect; we do not collect page content.</li>
+        <li>Validate and manage Pro licensing after purchase.</li>
+        <li>Comply with legal obligations (e.g., accounting/audit records for purchases).</li>
+      </ul>
+    </div>
+
+    <h2>Permissions & Host Access</h2>
+    <div class="card">
+      <p>We request only the permissions needed for the single purpose of saving and opening your links efficiently:</p>
+      <ul>
+        <li><strong>storage:</strong> Save your links, categories, and preferences locally.</li>
+        <li><strong>contextMenus:</strong> Provide “Add this page” and quick-open menus.</li>
+        <li><strong>tabs / activeTab:</strong> Open or update the current tab when you launch a saved link; limit any visual overlay to the tab you interacted with.</li>
+        <li><strong>bookmarks (optional):</strong> Read your chosen folders once to import bookmarks you select.</li>
+        <li><strong>notifications:</strong> Confirm saves with a brief toast.</li>
+        <li><strong>unlimitedStorage:</strong> Support large personal libraries without sync quotas.</li>
+        <li><strong>scripting:</strong> Render the optional one-time “open shimmer” overlay. No page scraping.</li>
+        <li><strong>Host permissions:</strong> Only for license checks (our domain) and, if enabled, to render the ephemeral overlay on the page you open.</li>
+      </ul>
+    </div>
+
+    <h2>Data Sharing</h2>
+    <div class="card">
+      <ul>
+        <li><strong>No sales of data.</strong></li>
+        <li><strong>Service providers:</strong> Stripe (payments), optional email provider (license delivery). They process data under their own privacy policies.</li>
+        <li><strong>Legal:</strong> We may disclose information if required by law or to protect our rights.</li>
+      </ul>
+    </div>
+
+    <h2>Retention</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Local data:</strong> Stays on your device until you delete it or uninstall the extension.</li>
+        <li><strong>Licensing records:</strong> Kept as long as necessary to operate Pro access and meet legal/accounting duties.</li>
+      </ul>
+    </div>
+
+    <h2>Your Choices & Controls</h2>
+    <div class="card">
+      <ul>
+        <li>Delete any link or category from the Options page.</li>
+        <li>Clear LinkSphinx data via the Options page or <code>chrome://extensions</code> → “Clear data,” or by uninstalling the extension.</li>
+        <li>Disable visual effects in Settings if you prefer no overlay.</li>
+        <li>If you purchased Pro and want your licensing email removed from our records, contact us below.</li>
+      </ul>
+    </div>
+
+    <h2>Children’s Privacy</h2>
+    <div class="card">
+      <p>LinkSphinx is not directed to children under 13. If you believe a child provided personal data to us, contact us and we will promptly address it.</p>
+    </div>
+
+    <h2>Security</h2>
+    <div class="card">
+      <p>We use reasonable technical and organizational measures appropriate to the nature of the data we handle. No method of transmission or storage is 100% secure.</p>
+    </div>
+
+    <h2>Do Not Track</h2>
+    <div class="card">
+      <p>We do not track users across third-party sites, and the extension does not respond to DNT signals.</p>
+    </div>
+
+    <h2>International Users</h2>
+    <div class="card">
+      <p>If you use LinkSphinx from outside the United States, you understand your information may be processed in the U.S. where privacy laws may differ from those in your jurisdiction.</p>
+    </div>
+
+    <h2>Changes to This Policy</h2>
+    <div class="card">
+      <p>We may update this policy from time to time. When we do, we will update the “Effective date” above. Material changes will be highlighted within this page.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Questions or requests? Email <a href="mailto:support@talismanlabs.vercel.app">support@talismanlabs.vercel.app</a>.</p>
+      <p class="small">Publisher: Talisman Labs</p>
+    </div>
+
+    <p class="muted small">Last updated: October 4, 2025</p>
+  </div>
+</body>
+</html>
