@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>LinkSphinx — Options</title>
+  <link rel="icon" href="icon3.png">
+  <link rel="stylesheet" href="options.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="icon3.png" alt="LinkSphinx" />
+      <h1>LinkSphinx</h1>
+    </div>
+    <p class="subtitle">Organize your QuickLinks into categories, add links, and import bookmarks.</p>
+  </header>
+
+  <main class="wrap">
+    <!-- Links Manager -->
+     <!-- Search -->
+<section class="card">
+  <h2>Search</h2>
+  <input id="searchInput" class="text" type="text" placeholder="Type to filter links… (e.g. go)" />
+  <small class="hint">Filters by title, URL, or category. Matches start-with on words.</small>
+</section>
+
+<section class="card">
+  <h2>Links</h2>
+  <div id="linksContainer" class="list">
+    <!-- Populated by JS: groups for Main + categories -->
+  </div>
+  <small class="hint">Click “Remove” to delete a link. Main links appear directly in the LinkSphinx menu.</small>
+</section>
+
+    <!-- Categories -->
+    <section class="card">
+      <h2>Categories</h2>
+      <form id="newCategoryForm" class="inline">
+        <input id="newCategoryInput" class="text" type="text"
+               placeholder="e.g. Movies, e.g. Shopping" aria-label="New category name" />
+        <button class="btn" type="submit">Add Category</button>
+      </form>
+
+      <ul id="categoryList" class="list" aria-label="Category list (drag to reorder)">
+        <!-- Populated by JS -->
+      </ul>
+      <small class="hint">Tip: Drag categories to reorder. Click the name to rename.</small>
+    </section>
+
+    <!-- Manual Link Add -->
+    <section class="card">
+      <h2>Add Link</h2>
+      <form id="newLinkForm" class="grid">
+        <label>
+          <span>URL</span>
+          <input id="linkUrl" class="text" type="url" placeholder="https://example.com" required />
+        </label>
+        <label>
+          <span>Title (optional)</span>
+          <input id="linkTitle" class="text" type="text" placeholder="Example Site" />
+        </label>
+        <label>
+          <span>Category</span>
+          <select id="linkCategory" class="select"></select>
+        </label>
+        <div class="row">
+          <button class="btn" type="submit">Add Link</button>
+        </div>
+      </form>
+    </section>
+    <section class="card">
+  <h2>Preferences</h2>
+
+  <label class="checkbox">
+    <input id="openInNewTab" type="checkbox" />
+    <span>Open links in a new tab</span>
+  </label>
+
+  <label class="checkbox">
+    <input id="openAnim" type="checkbox" />
+    <span>Play shimmer when opening a link</span>
+  </label>
+</section>
+
+
+
+    <section class="card" id="importCard">
+  <div id="importSummary" class="muted" aria-live="polite"></div>
+  <h2>Import from Chrome Bookmarks</h2>
+
+  <!-- Import controls -->
+  <div class="importRow" id="importControls">
+    <button id="openImport" class="btn secondary" type="button">Choose Folder…</button>
+    <label class="checkbox">
+      <input id="mapSubfolders" type="checkbox" />
+      <span>Map subfolders to categories</span>
+    </label>
+    <label class="checkbox">
+      <input id="skipDuplicates" type="checkbox" checked />
+      <span>Skip duplicate links</span>
+    </label>
+  </div>
+
+  <!-- PRO overlay (shown until license is active) -->
+  <div class="lockedOverlay" id="proOverlay" role="dialog" aria-label="Unlock Pro">
+    <div class="lockedPanel">
+      <h3>Unlock Importing Bookmarks</h3>
+      <p class="muted">
+        Support the developer and enable bookmark imports with a Pro License — just $1.99.
+      </p>
+
+      <div class="buyRow">
+        <button id="proBuy" class="btn">Unlock for $1.99</button>
+        <small class="muted">Secure Stripe checkout</small>
+      </div>
+
+      <div class="redeemRow">
+        <label class="redeemLabel" for="proKey">Have a license?</label>
+        <input id="proKey" class="text" type="text" placeholder="Paste license key…" />
+        <button id="proRedeem" class="btn secondary">Redeem</button>
+      </div>
+
+      <div id="proStatus" class="muted" aria-live="polite"></div>
+    </div>
+  </div>
+
+
+
+
+ 
+    </section>
+  </main>
+   <section class="card">
+    <p class="muted">This will remove <strong>all links</strong> and <strong>all categories</strong> from QuickLinks.</p>
+  <button id="deleteAllBtn" class="btn danger" type="button">Delete All Links and Data</button>
+  
+</section>
+
+  <!-- Folder Picker Modal -->
+  <dialog id="folderDialog">
+    <form method="dialog" class="modal">
+      <h3>Select a bookmarks folder</h3>
+      <div class="folderTree" id="folderTree" role="tree"></div>
+      <menu>
+        <button value="cancel" class="btn ghost">Cancel</button>
+        <button id="confirmFolder" value="ok" class="btn">Import</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> LinkSphinx</small>
+  </footer>
+
+  <script src="options.js" defer></script>
+  
+</body>
+</html>
