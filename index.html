@@ -123,23 +123,7 @@
    aria-label="Add LinkSphinx to Chrome">
    Add to Chrome
 </a>
-        <a id="openOptionsBtn" class="btn secondary" href="#" aria-label="Open LinkSphinx Options">Open Options</a>
-
-<script>
-  document.getElementById('openOptionsBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    const extId = 'balkaacioomajlljacfobofhfmckfbei';
-    const optionsUrl = `chrome-extension://${extId}/options.html`;
-    
-    // Try to open the options page (will only work if installed)
-    try {
-      window.open(optionsUrl, '_blank');
-    } catch (err) {
-      // If not installed, fallback to Web Store
-      window.open(`https://chrome.google.com/webstore/detail/linksphinx/${extId}`, '_blank');
-    }
-  });
-</script>
+       
 
 
       </div>
